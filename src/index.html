@@ -10,19 +10,21 @@
 <body>
     <header>
         <h1>Cat Tally of Shame</h1>
-        <p>Current tally: 🐈‍⬛ 🐈‍⬛ 🐈‍⬛</p>
-        <p>Curious garden gnomes: 🦔 🦔</p>
+        <p>Current tally: 🐈‍⬛ 🐈‍⬛ 🐈‍⬛ 🐈‍⬛</p>
+        <p>Curious garden gnomes: 🦔 🦔 🦔</p>
     </header>
     <main>
+        <p>These cats have been known to trespass into other's gardens to take a poo and dig up the veggies, all while risking death on the vehicle-laden streets.</p>
+
         <section class="photos">
-        {% image "./src/images/IMG_9899.jpeg" "Cat #3 - aka Fat Cat" "100vw" %}
-        {% image "./src/images/IMG_9898.jpeg" "Cat #2 - aka Neighbour's Cat" "100vw" %}
-        <figure class="no-photo">
-            😿
-            <figcaption>#1 - no photo</figcaption>
-        </figure>
+            {% for img in images %}
+            {% image img "Cat in a trap" "" "100vw" %}
+            {% endfor %}
+            <figure class="no-photo">
+                😿
+                <figcaption>#1 - no photo</figcaption>
+            </figure>
         </section>
-        
     </main>
 </body>
 </html>

@@ -21,10 +21,24 @@ main {
 }
 
 .photos {
-    display: grid;
+    display: flex;
+    flex-flow: row wrap;
     width: 100%;
-    grid-template-columns: repeat(4, 25%);
-    grid-gap: 2em;
+    gap: 2em;
+}
+@media (min-width: 40em) {
+    .photos {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 2em));
+        grid-gap: 2em;
+    }
+}
+@media (min-width: 60em) {
+    .photos {
+        display: grid;
+        grid-template-columns: repeat(4, calc(25% - 2em));
+        grid-gap: 2em;
+    }
 }
 
 img {
@@ -42,3 +56,11 @@ img {
     font-size: 200%;
     background-color: #aba4ff;
 }
+
+article {
+    margin: 0 auto;
+    max-width: 100ch;
+}
+
+figure { margin: 0; }
+figcaption { text-align: center; }
